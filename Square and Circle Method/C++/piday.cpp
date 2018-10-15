@@ -16,7 +16,6 @@ double distance;
 
 int main() 
 {
-  std::setprecision(16);
   //seed rand() with time for more randomness
   srand(time(0));
   std::cout << "Calculating..." << std::endl;
@@ -37,7 +36,7 @@ int main()
   }
   double pi = 8.0 * piNumerator / max_range;
   std::cout << piNumerator << std::endl;
-  std::cout << "Value of pi approximated: " << pi << std::endl;
+  std::cout << "Value of pi approximated: " << std::setprecision(16) << pi << std::endl;
   clock_t end = clock();
   double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
   std::cout << "Seconds elapsed: " << elapsed_secs << std::endl;
